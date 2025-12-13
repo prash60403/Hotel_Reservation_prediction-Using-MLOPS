@@ -3,6 +3,7 @@ numpy
 google-cloud-storage
 scikit-learn
 pyyaml
-imbalance-learn
+imbalanced-learn
 lightgbm
 mlflow
+flask

@@ -1,0 +1,178 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Glass Container */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 30px 35px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease;
+}
+
+/* Title */
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #f1f1f1;
+    margin-bottom: 6px;
+}
+
+/* Inputs & Select */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+/* Hover & Focus */
+.form-group input:focus,
+.form-group select:focus {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.6);
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    transition: all 0.4s ease;
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(221, 36, 118, 0.5);
+}
+
+/* Result Box */
+/* Prediction Result Base */
+.result {
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    animation: popIn 0.6s ease;
+}
+
+/* Cancellation Prediction */
+.result.cancel {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.8);
+    color: #fff;
+    animation: shake 0.5s ease, glowRed 1.5s infinite alternate;
+}
+
+/* Confirmation Prediction */
+.result.confirm {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    box-shadow: 0 0 20px rgba(56, 239, 125, 0.8);
+    color: #fff;
+    animation: pulse 1.2s infinite alternate, glowGreen 1.5s infinite alternate;
+}
+
+/* Animations */
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+}
+
+@keyframes glowGreen {
+    from {
+        box-shadow: 0 0 10px rgba(56, 239, 125, 0.5);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(56, 239, 125, 1);
+    }
+}
+
+@keyframes glowRed {
+    from {
+        box-shadow: 0 0 10px rgba(255, 65, 108, 0.5);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 65, 108, 1);
+    }
+}
