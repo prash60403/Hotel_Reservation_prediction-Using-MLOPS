@@ -3,4 +3,3 @@ mlruns/
 logs/
 MLOPS_Hotel_Reservation.egg-info/
 *.pkl
-notebook/Random_forest_Model.pkl
