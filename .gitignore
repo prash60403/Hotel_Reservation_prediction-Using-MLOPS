@@ -2,4 +2,5 @@ venv/
 mlruns/
 logs/
 MLOPS_Hotel_Reservation.egg-info/
-notebook/Random_forest_Model.pkl/
+*.pkl
+notebook/Random_forest_Model.pkl
